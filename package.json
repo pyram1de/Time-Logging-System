@@ -1,0 +1,29 @@
+{
+  "name": "time-logging-system",
+  "version": "1.0.0",
+  "description": "time logging system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyram1de/time-logging-system.git"
+  },
+  "keywords": [
+    "time",
+    "logging",
+    "system"
+  ],
+  "author": "David Hulmes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pyram1de/time-logging-system/issues"
+  },
+  "homepage": "https://github.com/pyram1de/time-logging-system#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {}
+}
