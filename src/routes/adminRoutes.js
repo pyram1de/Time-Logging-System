@@ -70,7 +70,7 @@ var router = function (nav) {
             });
         });
     
-    adminRouter.route('removeBooks')
+    adminRouter.route('/removeBooks')
         .get(function(req, res) {
             mongodb.connect(url, function(err, db){
                 var collection = db.collection('books');
