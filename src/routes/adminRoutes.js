@@ -79,6 +79,13 @@ var router = function (nav) {
                 });
             });
         });
+    
+    adminRouter.route('/')
+        .get(function(req, res) {
+            res.render('admin',{
+                            nav: nav
+                        });
+        });
 
     return adminRouter;
 };

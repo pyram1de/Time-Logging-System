@@ -16,7 +16,6 @@ var router = function (nav) {
                 collection.find({}).toArray(
                     function (err, results) {
                         res.render('bookListView', {
-                            title: 'Books',
                             nav: nav,
                             books: results
                         });
@@ -38,7 +37,6 @@ var router = function (nav) {
                 collection.findOne({_id: id},
                     function (err, results) {
                         res.render('bookView', {
-                            title: 'Books',
                             nav: nav,
                             book: results
                         });
