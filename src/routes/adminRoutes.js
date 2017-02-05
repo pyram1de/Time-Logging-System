@@ -54,12 +54,9 @@ var books = [
     ];
 
 var router = function (nav) {
-
+    var url = 'mongodb://localhost:27017/books';
     adminRouter.route('/addBooks')
         .get(function (req, res) {
-            var url =
-                'mongodb://localhost:27017/books';
-
             mongodb.connect(url, function (err, db) {
                 var collection = db.collection('books');
                 console.log(books[0]);
@@ -70,6 +67,16 @@ var router = function (nav) {
                     }
                 );
 
+            });
+        });
+    
+    adminRouter.route('removeBooks')
+        .get(function(req, res) {
+            mongodb.connect(url, function(err, db){
+                var collection = db.collection('books');
+                collection.remove({}, function(){
+                    res.send("removed books");
+                });
             });
         });
 
