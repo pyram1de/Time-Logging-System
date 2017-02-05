@@ -20,8 +20,6 @@ app.set('view engine', 'ejs');
 
 app.use('/Books', bookRouter);
 app.use('/Admin', adminRouter);
-
-
 app.get('/', function (req, res) {
     res.render('index', {
         title: 'Hello from render',

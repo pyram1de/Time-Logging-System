@@ -62,11 +62,9 @@ var router = function (nav) {
 
             mongodb.connect(url, function (err, db) {
                 var collection = db.collection('books');
-            console.log(books[0]);
-            
-            collection.insertMany(books,
+                console.log(books[0]);
+                collection.insertMany(books,
                     function (err, results) {
-                       
                         res.send(results);
                         db.close();
                     }
