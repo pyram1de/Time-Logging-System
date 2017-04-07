@@ -74,7 +74,7 @@ var router = function (nav) {
             mongodb.connect(url, function (err, db) {
                 var collection = db.collection('books');
                 collection.remove({}, function () {
-                    res.send("removed books");
+                    res.send('removed books');
                 });
             });
         });
